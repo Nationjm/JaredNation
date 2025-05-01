@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quizlet Redesign - Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --background: #f8fafc;
+      --white: #ffffff;
+      --text: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--white);
+      width: 100%;
+      padding: 2.5rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--white);
+      padding: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1d4ed8;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 90%;
+      margin: 3rem auto;
+      background-color: var(--white);
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .project {
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      background-color: var(--white);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .project:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .project h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #1d4ed8;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .project a:hover {
+      color: #1e40af;
+    }
+
+    .testing-section {
+      margin-top: 3rem;
+    }
+
+    .testing-section h4 {
+      margin-bottom: 1rem;
+    }
+
+    .testing-section p {
+      margin-bottom: 1.5rem;
+    }
+
+    .testing-step {
+      margin-bottom: 2rem;
+    }
+
+    .testing-step img {
+      width: 100%;
+      max-width: 600px;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+
+      .project {
+        padding: 1rem;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>Quizlet Redesign Project</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Back to Portfolio</a>
+  </nav>
+
+  <div class="container">
+    <h2>Project Overview</h2>
+    <div class="project">
+      <h3>Quizlet Redesign</h3>
+      <p>This project focuses on redesigning the Quizlet platform to enhance its user experience, adding new features that support better learning and customization for users. We worked in a team focused on creating new features that improved user's component skills.</p>
+
+      <h4>Key Features Implemented:</h4>
+      <ul>
+        <li>Implemented a connections feature that allows users to create connections between different topics to improve material retention</li>
+        <li>Modified the quiz taking to add a feature that allows the user to get hints about what the answer is when they are struggling with memory recall</li>
+        <li>Added a grouping feature that allows users to sort topics and flashcards into specific groups that helps with their own personal memory retention</li>
+        <li>Created a feature that recommended mnemonic devices to users after they got a question wrong twice so that they could have a new way to remember the answer</li>
+        <li>Implemented a collaborate feature where users can view other concept maps and groups made by other users to see what helps others learn to improve their own learning</li>
+      </ul>
+
+      <h4>Tools Used:</h4>
+      <p>Figma, Affinity Diagramming, HTML, CSS, JavaScript</p>
+
+    <!-- User Testing Section -->
+    
+      <h4>Project Evolution</h4>
+      <p>Throughout the development of this project, we conducted multiple rounds of user testing, allowing us to refine and improve our design. Here's how the project evolved:</p>
+
+      <div class="testing-step">
+        <h5>Step 0: Persona creation and Affinity Diagramming</h5>
+        <p>During the first step of the redesign process, we created a simple affinity map for what people like and dislike about using quizlet, and we also created a person for a person that uses quizlet.</p>
+        <img src="AffinityDiagram.jpg" alt="Step 0: Affinity Diagramming">
+      </div>
+
+      <div class="testing-step">
+        <h5>Step 1: Low Fidelity Prototype</h5>
+        <p>Based on our affinity diagramming and our persona creation, we began creating low fidelity prototypes that looked like the one underneath that showed simply how they would work.</p>
+        <img src="MnemonicStoryboard.png" alt="Step 1: Low Fidelity Prototype">
+      </div>
+
+      <div class="testing-step">
+        <h5>Step 2: Mid Fidelity Prototypes</h5>
+        <p>After the creation of some simple designs of low fidelity, we moved on to create medium fidelity prototypes that have small simple functionality and could easily show what the feature was meant to do</p>
+        <img src="MidFi.jpg" alt="Step 2: Mid Fidelity Prototype">
+      </div>
+
+      <div class="testing-step">
+        <h5>Step 3: High Fidelity Prototype</h5>
+        <p>After conducting some research and user testing, we proceeded forward to create high fidelity clickable prototypes that exemplified exaclty what we wanted the features to do</p>
+        <img src="HighFi.jpg" alt="Step 3: High Fidelity Prototype">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
